@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HegeApp - Bienestar Emocional</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F3F6F9;
+      color: #2E4053;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background-color: #1F3A6E;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      color: white;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      height: 70px;
+    }
+    .logo span {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #AFCBFF;
+      user-select: none;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      flex-grow: 1;
+      margin-left: 40px;
+    }
+    nav a {
+      color: #C8D7F8;
+      text-decoration: none;
+      padding: 5px 8px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #AFCBFF;
+      color: #1F3A6E;
+    }
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .btn-primary {
+      background-color: #AFCBFF;
+      color: #1F3A6E;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #7B9EDC;
+      color: white;
+    }
+    .btn-secondary {
+      background: none;
+      border: 2px solid #AFCBFF;
+      padding: 6px 20px;
+      border-radius: 6px;
+      color: #AFCBFF;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background-color: #AFCBFF;
+      color: #1F3A6E;
+    }
+    .user-welcome {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #AFCBFF;
+      user-select: none;
+      margin-left: 20px; /* separacion extra */
+      white-space: nowrap;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    section {
+      background-color: white;
+      margin-bottom: 30px;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #1F3A6E;
+      border-bottom: 3px solid #AFCBFF;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style: inside disc;
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #1F3A6E;
+      color: white;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+    }
+    button {
+      background-color: #AFCBFF;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: #1F3A6E;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #7B9EDC;
+    }
+    .img-section {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .img-section figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+      max-width: 150px;
+    }
+    .img-section img {
+      max-width: 150px;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    .img-section figcaption {
+      margin-top: 8px;
+      font-weight: 700;
+      color: #1F3A6E;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    /* Sección de descarga */
+    #download-section {
+      background-color: #E8F0FE;
+      padding: 40px 30px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 30px auto 50px auto;
+    }
+    #download-section h2 {
+      margin-bottom: 25px;
+      color: #1F3A6E;
+    }
+    #download-section button {
+      margin: 0 15px;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      border: none;
+      font-weight: 700;
+      color: #1F3A6E;
+      transition: background-color 0.3s ease;
+    }
+    #download-section button:hover {
+      background-color: #7B9EDC;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="C:\\Users\\reyiez\\Documents\\IHC\\images\\logo_hegeApp_ihc-removebg-preview.png" alt="HegeApp Logo" />
+      <span>HarmonyHub</span>
+    </div>
+    <nav>
+      <a href="#inicio">Home</a>
+      <a href="#resources">Resources ▼</a>
+      <a href="#app">App ▼</a>
+      <a href="#qna">Q&A's</a>
+      <a href="#about">About us</a>
+    </nav>
+    <div class="nav-buttons">
+      <a href="#download-section" class="btn-primary">Download App</a>
+      <a href="#contacto" class="btn-secondary">Contact us</a>
+    </div>
+    <div class="user-welcome">
+      Bienvenido, <strong>Juan</strong>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Tu compañero para el bienestar emocional</h2>
+      <p>HegeApp es una aplicación diseñada para monitorear y mejorar tu salud mental a través de preguntas diarias, seguimiento emocional personalizado y recomendaciones basadas en inteligencia artificial.</p>
+      <p>Con HegeApp podrás recibir apoyo, realizar ejercicios de relajación y, si lo necesitas, conectarte con profesionales certificados.</p>
+      <button onclick="alert('Gracias por tu interés. Próximamente disponible.')">Próximamente</button>
+      <div class="img-section">
+        <figure>
+          <img src="C:\\Users\\reyiez\\Documents\\IHC\\images\\monitoreo.png" alt="Monitoreo emocional" />
+          <figcaption>Monitoreo emocional</figcaption>
+        </figure>
+        <figure>
+          <img src="C:\\Users\\reyiez\\Documents\\IHC\\images\\chatbot.png" alt="Chatbot de apoyo" />
+          <figcaption>Chatbot de apoyo</figcaption>
+        </figure>
+        <figure>
+          <img src="C:\\Users\\reyiez\\Documents\\IHC\\images\\relajacion.png" alt="Ejercicios de relajación" />
+          <figcaption>Ejercicios de relajación</figcaption>
+        </figure>
+        <figure>
+          <img src="C:\\Users\\reyiez\\Documents\\IHC\\images\\foro.png" alt="Foro comunitario" />
+          <figcaption>Foro comunitario</figcaption>
+        </figure>
+      </div>
+    </section>
+    
+    <section id="funcionalidades">
+      <h2>Funcionalidades</h2>
+      <ul>
+        <li>Monitoreo diario de estado emocional con preguntas personalizadas.</li>
+        <li>Chatbot con inteligencia artificial para apoyo emocional.</li>
+        <li>Ejercicios guiados de relajación y control del estrés.</li>
+        <li>Conexión con profesionales de salud mental certificados.</li>
+        <li>Visualización gráfica del progreso emocional.</li>
+        <li>Foro para compartir experiencias y apoyo comunitario.</li>
+      </ul>
+    </section>
+    <section id="beneficios">
+      <h2>Beneficios para ti</h2>
+      <p>Mejora tu bienestar emocional con un acompañamiento personalizado y accesible las 24 horas del día.</p>
+      <p>Registra tus emociones y recibe recomendaciones adaptadas a tus necesidades.</p>
+      <p>Accede a un espacio seguro donde compartir y aprender con otros usuarios.</p>
+    </section>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Tienes preguntas o quieres ser parte de HegeApp? Escríbenos a <a href="mailto:contacto@hegeapp.com">contacto@hegeapp.com</a>.</p>
+    </section>
+
+    <section id="download-section" style="background-color: #E8F0FE; padding: 40px 30px; text-align: center; border-radius: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.1); max-width: 600px; margin: 30px auto 50px auto;">
+  <h2 style="color: #1F3A6E; margin-bottom: 25px;">Descarga la aplicación</h2>
+  <p>Selecciona tu plataforma para descargar la app:</p>
+  <div style="display: flex; justify-content: center; gap: 50px; margin-top: 20px;">
+    <a href="https://play.google.com/store/apps/details?id=tu.app.id" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; width: 150px; height: 50px;">
+      <img src="C:\\Users\\reyiez\\Documents\\IHC\\images\\googlePlay-removebg-preview.png" alt="Get it on Google Play" style="max-height: 90px; max-width: 100%;"/>
+    </a>
+    <a href="https://apps.apple.com/app/idtuappid" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; width: 150px; height: 50px;">
+      <img src="C:\\Users\\reyiez\\Documents\\IHC\\images\\iOS-removebg-preview.png" alt="Download on the App Store" style="max-height: 90px; max-width: 100%;"/>
+    </a>
+  </div>
+</section>
+
+
+
+
+  </main>
+  <footer>
+    &copy; 2025 Harmony Hub. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
