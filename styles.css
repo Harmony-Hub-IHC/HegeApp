@@ -243,12 +243,34 @@ footer {
   outline: none;
 }
 
-.contacto-footer p {
-  margin-top: 20px;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #D1FAE5;
+#cuestionario {
+  text-align: center;
+  margin-top: 30px;
 }
+
+.quiz-option {
+  background-color: #B0C7FF;
+  color: #0D1F3F;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  font-size: 1.1rem;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-option:hover {
+  background-color: #7A95DC;
+}
+
+#final-message {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #28a745;
+}
+
 
 .whatsapp-link {
   color: #22C55E;
@@ -475,4 +497,50 @@ button:focus {
     max-width: 100%;
     padding: 30px 15px;
   }
+}
+
+/* Cambiar el color del texto de las etiquetas (nombre, correo, mensaje) */
+form label {
+  color: #0D1F3F; /* Cambia #FF5733 por el color que prefieras */
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Cambiar el color del texto dentro de los campos de entrada (nombre, correo) */
+form input,
+form textarea {
+  color: #333333; /* Cambia #333333 por el color que prefieras */
+  font-size: 1rem;
+}
+
+/* Cambiar el color de fondo de los campos de entrada (opcional) */
+form input,
+form textarea {
+  background-color: #F1F8FF; /* Un color suave de fondo */
+  border: 1px solid #B0C7FF; /* Puedes cambiar el borde si lo deseas */
+}
+
+/* Estilo del botón */
+form button {
+  background-color: #B0C7FF;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #0D1F3F;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #0D1F3F;
+  outline: none;
+}
+
+#contact-message {
+  color: #28a745; /* Cambia #28a745 por el color que prefieras */
+  font-weight: 600;
+  margin-top: 20px;
 }
