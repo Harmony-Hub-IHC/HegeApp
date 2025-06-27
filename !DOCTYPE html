@@ -1,2 +1,10 @@
-assets/index.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi Página</title>
+</head>
+<body>
+  <h1>Hola, esto está dentro de la carpeta public</h1>
+</body>
+</html>
 
