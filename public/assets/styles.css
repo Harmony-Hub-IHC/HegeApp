@@ -1,0 +1,545 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: #F7F9FC;
+  color: #1B2A49;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 40px;
+  height: 70px;
+  background-color: #0D1F3F;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: white;
+  font-weight: 600;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.logo span {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #B0C7FF;
+  user-select: none;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+nav a {
+  color: #B0C7FF;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #B0C7FF;
+  color: #0D1F3F;
+  outline: none;
+}
+
+.nav-buttons {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.btn-primary {
+  background-color: #B0C7FF;
+  color: #0D1F3F;
+  padding: 8px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #7A95DC;
+  color: white;
+  outline: none;
+}
+
+.btn-secondary {
+  background: none;
+  border: 2px solid #B0C7FF;
+  padding: 8px 22px;
+  border-radius: 8px;
+  color: #B0C7FF;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #B0C7FF;
+  color: #0D1F3F;
+  outline: none;
+}
+
+.user-welcome {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #B0C7FF;
+  user-select: none;
+  margin-left: 25px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+main {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  margin-bottom: 40px;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+h2 {
+  color: #0D1F3F;
+  border-bottom: 4px solid #B0C7FF;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+ul {
+  list-style: inside disc;
+  margin-bottom: 25px;
+  font-size: 1.15rem;
+  color: #1B2A49;
+}
+
+a {
+  color: #0D1F3F;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #7A95DC;
+  outline: none;
+}
+
+/* Imagenes de la sección con hover para agrandar */
+.img-section figure img {
+  transition: transform 0.3s ease;
+}
+
+.img-section figure:hover img,
+.img-section figure:focus-within img {
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #111827;
+  color: #E5E7EB;
+  padding: 40px 20px 20px 20px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 180px;
+  min-width: 180px;
+}
+
+.footer-column h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #3B82F6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #D1D5DB;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover,
+.footer-column ul li a:focus {
+  color: #3B82F6;
+  text-decoration: underline;
+  outline: none;
+}
+
+#cuestionario {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.quiz-option {
+  background-color: #B0C7FF;
+  color: #0D1F3F;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  font-size: 1.1rem;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-option:hover {
+  background-color: #7A95DC;
+}
+
+#final-message {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #28a745;
+}
+
+
+.whatsapp-link {
+  color: #22C55E;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
+}
+
+.ubicacion-link {
+  color: #9CA3AF;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.ubicacion-link:hover {
+  text-decoration: underline;
+}
+
+.nuevo {
+  background-color: #3B82F6;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+/* Evitar que las imágenes del footer se agranden o tengan efecto hover */
+footer img {
+  max-width: 140px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: none;
+  transition: none !important;
+  transform: none !important;
+  cursor: default;
+  margin: 8px 12px 8px 0;
+}
+
+/* Ajustes específicos para el QR */
+footer .app-download img {
+  max-width: 140px;
+  margin: 8px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  cursor: default;
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Ajustes para logos en el footer bottom */
+.footer-logos img {
+  height: 90px;
+  margin-left: 12px;
+  max-width: none;
+  cursor: default;
+  transition: none !important;
+  transform: none !important;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: #6B7280;
+  margin-right: 15px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #3B82F6;
+}
+
+.app-download img:last-child {
+  margin-top: 18px;
+  max-width: 220px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.8rem;
+  color: #9CA3AF;
+}
+
+/* Otros estilos del sitio */
+
+button {
+  background-color: #B0C7FF;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #0D1F3F;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #7A95DC;
+  outline: none;
+}
+
+.img-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.img-section figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12px;
+  max-width: 160px;
+}
+
+.img-section img {
+  max-width: 160px;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  height: auto;
+}
+
+.img-section figcaption {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #0D1F3F;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+/* Sección descarga */
+#download-section {
+  background-color: #E8F1FF;
+  padding: 50px 35px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  max-width: 650px;
+  margin: 40px auto 60px auto;
+}
+
+#download-section h2 {
+  margin-bottom: 30px;
+  color: #0D1F3F;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+#download-section p {
+  font-size: 1.15rem;
+  margin-bottom: 25px;
+  color: #1B2A49;
+}
+
+#download-section div {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+#download-section a img {
+  max-height: 100px;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 3px 9px rgba(0,0,0,0.15);
+}
+
+#download-section a:hover img,
+#download-section a:focus img {
+  transform: scale(1.08);
+  outline: none;
+}
+
+/* Responsive para móvil */
+@media (max-width: 700px) {
+  header {
+    padding: 8px 20px;
+    height: 70px;
+    justify-content: center;
+  }
+  nav {
+    margin-left: 0;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .nav-buttons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 20px;
+  }
+  main {
+    padding: 0 15px;
+  }
+  .img-section {
+    justify-content: center;
+  }
+  #download-section {
+    max-width: 100%;
+    padding: 30px 15px;
+  }
+}
+
+/* Cambiar el color del texto de las etiquetas (nombre, correo, mensaje) */
+form label {
+  color: #0D1F3F; /* Cambia #FF5733 por el color que prefieras */
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Cambiar el color del texto dentro de los campos de entrada (nombre, correo) */
+form input,
+form textarea {
+  color: #333333; /* Cambia #333333 por el color que prefieras */
+  font-size: 1rem;
+}
+
+/* Cambiar el color de fondo de los campos de entrada (opcional) */
+form input,
+form textarea {
+  background-color: #F1F8FF; /* Un color suave de fondo */
+  border: 1px solid #B0C7FF; /* Puedes cambiar el borde si lo deseas */
+}
+
+/* Estilo del botón */
+form button {
+  background-color: #B0C7FF;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #0D1F3F;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #0D1F3F;
+  outline: none;
+}
+
+#contact-message {
+  color: #28a745; /* Cambia #28a745 por el color que prefieras */
+  font-weight: 600;
+  margin-top: 20px;
