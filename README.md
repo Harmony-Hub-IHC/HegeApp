@@ -3,7 +3,7 @@ HegeApp es una aplicación cuyo objetivo es ofrecer una solución innovadora en 
 Los autores,  del grupo Harmony Hub, son: 
 Adriana Nicole Ramos Fuentes Rivera;
 Fabian Jhon Tarrillo Ayllon;
-Sebastian Eduardo Reyes Limo;
+Sebastian Eduardo Reyes Limo y
 Oriana Romina Gonzalez Melendez
 
 Los segmento objetivo son: 
