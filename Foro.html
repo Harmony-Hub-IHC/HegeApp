@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Foro de la Comunidad - Harmony Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Foro de la Comunidad</h1>
+     <nav>
+      <a href="index.html">Volver a la página principal</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Temas Recientes</h2>
+      <ul>
+        <li><strong>¿Cómo manejas la ansiedad en tiempos de estrés?</strong><br><em>Publicado por Ana</em> – <a href="#">Ver respuestas</a></li>
+        <li><strong>Recomendaciones para dormir mejor</strong><br><em>Publicado por Luis</em> – <a href="#">Ver respuestas</a></li>
+        <li><strong>¿Alguien ha probado meditación guiada?</strong><br><em>Publicado por Carla</em> – <a href="#">Ver respuestas</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Crear nuevo tema</h2>
+      <form id="form-nuevo-tema">
+        <label for="titulo">Título del tema:</label>
+        <input type="text" id="titulo" name="titulo" required />
+        <label for="contenido">Contenido:</label>
+        <textarea id="contenido" name="contenido" rows="4" required></textarea>
+        <button type="submit">Publicar</button>
+      </form>
+      <p id="mensaje-tema" style="display:none; color: #28a745; font-weight: bold;">¡Tu tema fue publicado!</p>
+    </section>
+  </main>
+
+  <!-- Este div empuja el pie de página hacia abajo -->
+  <div style="height: 22px;"></div> <!-- Ajusta este valor para mayor o menor espacio -->
+
+  <footer>
+    <p>© 2025 Harmony Hub. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('form-nuevo-tema').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('mensaje-tema').style.display = 'block';
+      this.reset();
+    });
+  </script>
+</body>
+</html>

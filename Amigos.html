@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mis Amigos - Harmony Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Mis Amigos</h1>
+     <nav>
+      <a href="index.html">Volver a la página principal</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Lista de amigos</h2>
+      <ul id="lista-amigos">
+        <li>Ana Gómez <button class="btn-secondary">Eliminar</button></li>
+        <li>Pedro Quispe <button class="btn-secondary">Eliminar</button></li>
+        <li>Carla Mendoza <button class="btn-secondary">Eliminar</button></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Agregar nuevo amigo</h2>
+      <form id="form-agregar-amigo">
+        <label for="nombre-amigo">Nombre del amigo:</label>
+        <input type="text" id="nombre-amigo" required />
+        <button type="submit">Agregar</button>
+      </form>
+      <p id="mensaje-amigo" style="display:none; color: #28a745; font-weight: bold;">¡Amigo agregado!</p>
+    </section>
+  </main>
+
+  <!-- Este div empuja el pie de página hacia abajo -->
+  <div style="height: 135px;"></div> <!-- Ajusta este valor para mayor o menor espacio -->
+
+  <footer>
+    <p>© 2025 Harmony Hub. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const lista = document.getElementById("lista-amigos");
+    const form = document.getElementById("form-agregar-amigo");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nombre = document.getElementById("nombre-amigo").value.trim();
+      if (nombre) {
+        const nuevo = document.createElement("li");
+        nuevo.innerHTML = `${nombre} <button class="btn-secondary">Eliminar</button>`;
+        lista.appendChild(nuevo);
+        document.getElementById("mensaje-amigo").style.display = "block";
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>

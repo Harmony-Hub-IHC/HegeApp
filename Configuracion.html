@@ -16,33 +16,38 @@
     </nav>
   </header>
 
-  <main>
+ <main>
     <section id="configuracion-form">
       <h2>Preferencias de la App</h2>
-      <form>
-        <label for="notificaciones">Activar notificaciones</label>
-        <input type="checkbox" id="notificaciones" name="notificaciones" checked />
-
-        <label for="temas">Tema de la aplicación</label>
-        <select id="temas" name="temas">
-          <option value="claro">Claro</option>
-          <option value="oscuro">Oscuro</option>
-        </select>
-
-        <label for="privacidad">Configuración de privacidad</label>
-        <select id="privacidad" name="privacidad">
-          <option value="alta">Alta</option>
-          <option value="media">Media</option>
-          <option value="baja">Baja</option>
-        </select>
-
-        <button type="submit">Guardar Cambios</button>
-      </form>
+      <ul class="config-options">
+        <li>
+          <label for="notificaciones">
+            <input type="checkbox" id="notificaciones" name="notificaciones" checked />
+            Activar notificaciones
+          </label>
+        </li>
+        <li>
+          <label for="temas">Tema de la aplicación</label>
+          <select id="temas" name="temas">
+            <option value="claro" selected>Claro</option>
+            <option value="oscuro">Oscuro</option>
+          </select>
+        </li>
+        <li>
+          <label for="privacidad">Configuración de privacidad</label>
+          <select id="privacidad" name="privacidad">
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+        </li>
+      </ul>
+      <button type="submit">Guardar Cambios</button>
     </section>
   </main>
 
   <!-- Este div empuja el pie de página hacia abajo -->
-  <div style="height: 435px;"></div> <!-- Ajusta este valor para mayor o menor espacio -->
+  <div style="height: 347px;"></div> <!-- Ajusta este valor para mayor o menor espacio -->
 
   <footer>
     <p>&copy; 2025 Harmony Hub. Todos los derechos reservados.</p>
