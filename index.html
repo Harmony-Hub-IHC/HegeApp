@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HegeApp - Bienestar Emocional | Harmony Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+  <header role="banner">
+    <div class="logo">
+      <img src="images/logo_hegeapp.png" alt="Logo Harmony Hub" />
+      <span>Harmony Hub</span>
+    </div>
+    <nav role="navigation" aria-label="Menú principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#download-section">Descarga</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="nav-buttons">
+      <a href="#download-section" class="btn-primary">Descargar App</a>
+      <a href="#contacto" class="btn-secondary">Contáctanos</a>
+    </div>
+    <div class="user-welcome" aria-label="Bienvenida de usuario">
+  Bienvenido, <strong>Juan</strong>
+  <span class="arrow">&#9662;</span> <!-- Flecha -->
+  <div class="dropdown-menu">
+    <a href="perfil.html">Perfil</a>
+  <a href="notificaciones.html">Notificaciones</a>
+  <a href="configuracion.html">Configuración</a>
+  <a href="#" onclick="openModal()">Cerrar sesión</a>
+  </div>
+</div>
+
+<!-- Modal de confirmación -->
+<div id="logout-modal" class="modal">
+  <div class="modal-content">
+    <h2>¿Estás seguro de que quieres cerrar sesión?</h2>
+    <button onclick="closeModal()">Cancelar</button>
+    <button onclick="logout()">Confirmar</button>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main role="main">
+    <section id="inicio" tabindex="-1">
+      <h2>Tu aliado para el bienestar emocional</h2>
+      <p>HegeApp es una aplicación diseñada para monitorear y mejorar tu salud mental mediante preguntas diarias, seguimiento emocional personalizado y recomendaciones basadas en inteligencia artificial.</p>
+      <p>Recibe apoyo, realiza ejercicios de relajación y conecta con profesionales certificados cuando lo necesites.</p>
+      <button onclick="alert('Gracias por tu interés. Próximamente disponible.')">Próximamente</button>
+
+      <div class="img-section" aria-label="Imágenes ilustrativas de funcionalidades">
+        <figure>
+          <img src="images/monitoreo.png" alt="Monitoreo emocional" />
+          <figcaption>Monitoreo emocional</figcaption>
+        </figure>
+        <figure>
+          <img src="images/chatbot.png" alt="Chatbot de apoyo" />
+          <figcaption>Chatbot de apoyo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/relajacion.png" alt="Ejercicios de relajación" />
+          <figcaption>Ejercicios de relajación</figcaption>
+        </figure>
+        <figure>
+          <img src="images/foro.png" alt="Foro comunitario" />
+          <figcaption>Foro comunitario</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="funcionalidades" tabindex="-1">
+      <h2>Funcionalidades</h2>
+      <ul>
+        <li>Monitoreo diario de estado emocional con preguntas personalizadas.</li>
+        <li>Chatbot con inteligencia artificial para apoyo emocional.</li>
+        <li>Ejercicios guiados de relajación y control del estrés.</li>
+        <li>Conexión con profesionales certificados de salud mental.</li>
+        <li>Visualización gráfica del progreso emocional.</li>
+        <li>Foro para compartir experiencias y apoyo comunitario.</li>
+      </ul>
+    </section>
+
+    <section id="beneficios" tabindex="-1">
+      <h2>Beneficios para ti</h2>
+      <p>Mejora tu bienestar emocional con acompañamiento personalizado disponible las 24 horas.</p>
+      <p>Registra tus emociones y recibe recomendaciones adaptadas a tus necesidades.</p>
+      <p>Accede a un espacio seguro donde compartir y aprender con otros usuarios.</p>
+    </section>
+
+    <section id="download-section" tabindex="-1">
+      <h2>Descarga la aplicación</h2>
+      <p>Disponible para Android y iOS. ¡Comienza tu camino hacia un mejor bienestar emocional!</p>
+      <div>
+        <a href="https://play.google.com/store/apps/details?id=tu.app.id" target="_blank" rel="noopener noreferrer" aria-label="Descargar en Google Play">
+          <img src="images/googlePlay-removebg-preview.png" alt="Google Play Store" />
+        </a>
+        <a href="https://apps.apple.com/app/idtuappid" target="_blank" rel="noopener noreferrer" aria-label="Descargar en App Store">
+          <img src="images/iOS-removebg-preview.png" alt="App Store" />
+        </a>
+      </div>
+    </section>
+
+    <section id="cuestionario" tabindex="-1">
+  <h2>Cuestionario de Bienestar Emocional</h2>
+  <p>Realiza el siguiente cuestionario para que sepas qué tipo de usuario eres :D</p>
+  <!-- Enlace que redirige a la página del cuestionario -->
+  <a href="cuestionario.html">
+    <button id="start-quiz-btn">Iniciar Cuestionario</button>
+  </a>
+  <div id="quiz-container" style="display:none;">
+    <p id="question"></p>
+    <button class="quiz-option" onclick="answerQuestion(1)">Sí</button>
+    <button class="quiz-option" onclick="answerQuestion(2)">No</button>
+  </div>
+  <p id="final-message" style="display:none;">¡Gracias por completar el cuestionario! Pronto recibirás una respuesta.</p>
+</section>
+
+
+  </main>
+
+  <footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>SOBRE EL PROYECTO</h3>
+      <ul>
+        <li><a href="#">Nuestra misión y visión</a></li>
+        <li><a href="#">Equipo desarrollador</a></li>
+        <li><a href="#">Responsabilidad social</a></li>
+        <li><a href="#">Innovación tecnológica</a></li>
+        <li><a href="#">Oportunidades de colaboración</a></li>
+      </ul>
+      <div class="contacto-footer">
+        <p>Contáctanos</p>
+        <a href="https://wa.me/tu_numero" target="_blank" class="whatsapp-link">Chatea por Whatsapp</a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h3>AYUDA</h3>
+      <ul>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Soporte técnico</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>LEGAL</h3>
+      <ul>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de datos</a></li>
+        <li><a href="#">Accesibilidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>NOVEDADES</h3>
+      <ul>
+        <li><a href="#">Lanzamiento versión 2.0</a></li>
+        <li><a href="#">Próximas funciones</a></li>
+        <li><a href="#">Blog y artículos</a></li>
+      </ul>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-column app-download">
+      <h3>Descarga la App</h3>
+      <p>Escanea el código con tu celular y descárgala al instante</p>
+      <img src="images/Rickrolling_QR_code.png" alt="Código QR para descargar app" />
+    </div>
+  </div>
+<section id="escribir" tabindex="-1">
+  <h2>¿Tienes dudas, sugerencias o deseas colaborar? Escríbenos:</h2>
+  <form id="contact-form">
+    <label for="name">Tu Nombre:</label>
+    <input type="text" id="name" name="name" required />
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" required />
+    <label for="message">Mensaje:</label>
+    <textarea id="message" name="message" rows="1" required></textarea>  
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="contact-message" style="display: none;">¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.</p>
+</section>
+
+  <div class="footer-bottom">
+    <p>© 2025 Proyecto Harmony Hub. Todos los derechos reservados.</p>
+    <div class="footer-logos">
+      <img src="images/sistema de denuncias.png" alt="Logo 1" />
+      <img src="images/libro de reclamaciones.png" alt="Logo 2" />
+      <img src="images/compromisoo.png" alt="Logo 3" />
+      <img src="images/espacio accesible.png" alt="Logo 4" />
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

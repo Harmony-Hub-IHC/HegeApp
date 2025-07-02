@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cuestionario de Bienestar Emocional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet" />
+   <script src="script.js"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #F7F9FC;
+      color: #1B2A49;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      max-width: 800px;
+      margin: 50px auto;
+    }
+    #quiz-container {
+      display: none;
+    }
+    .quiz-option {
+      background-color: #B0C7FF;
+      color: #0D1F3F;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      font-size: 1.1rem;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .quiz-option:hover {
+      background-color: #7A95DC;
+    }
+    #final-message {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #28a745;
+    }
+    button {
+      background-color: #B0C7FF;
+      color: #0D1F3F;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      font-size: 1.1rem;
+      margin: 20px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #7A95DC;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <h1>Cuestionario de Bienestar Emocional</h1>
+  
+  <button id="start-quiz-btn" onclick="startQuiz()">Iniciar Cuestionario</button>
+
+  <div id="quiz-container">
+    <p id="question"></p>
+    <button class="quiz-option" onclick="answerQuestion(1)">Sí</button>
+    <button class="quiz-option" onclick="answerQuestion(2)">No</button>
+  </div>
+
+  <p id="final-message" style="display:none;">¡Gracias por completar el cuestionario! Pronto recibirás una respuesta.</p>
+
+ <!-- Enlace para regresar al índice -->
+  <nav>
+    <a href="index.html" class="back-button">Volver a la página principal</a>
+  </nav>
+  
+  <script>
+    let currentQuestion = 0;
+    const questions = [
+      "¿Te sientes emocionalmente equilibrado últimamente?",
+      "¿Sientes que estás manejando bien tus emociones?",
+      "¿Estás dispuesto a buscar ayuda si lo necesitas?"
+    ];
+
+    function startQuiz() {
+      document.getElementById("start-quiz-btn").style.display = "none";
+      document.getElementById("quiz-container").style.display = "block";
+      showQuestion();
+    }
+
+    function showQuestion() {
+      if (currentQuestion < questions.length) {
+        document.getElementById("question").textContent = questions[currentQuestion];
+      } else {
+        document.getElementById("quiz-container").style.display = "none";
+        document.getElementById("final-message").style.display = "block";
+      }
+    }
+    
+
+    function answerQuestion(answer) {
+      // Puedes manejar la respuesta aquí si es necesario, por ejemplo, guardándola.
+      currentQuestion++;
+      showQuestion();
+    }
+  </script>
+</body>
+</html>
