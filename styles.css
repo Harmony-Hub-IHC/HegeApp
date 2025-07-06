@@ -655,3 +655,9 @@ form button:focus {
   font-weight: 600;
   margin-top: 20px;
 }
+
+body {
+  background-image: url('images/patron_flores_azules.jpg');
+  background-repeat: repeat; 
+  background-size: auto; 
+}
